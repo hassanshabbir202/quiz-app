@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+
+.glow-on-hover {
+    width: 100px;
+    height: 35px;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.quizbtnCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#html , #css , #js{
+    display: none;
+}
+.radiobutton1,.radiobutton2,.radiobutton3{
+    visibility: hidden;
+}
+
+
+.cssradiobutton1,.cssradiobutton2,.cssradiobutton3{
+    visibility: hidden;
+}
+
+
+.jsradiobutton1,.jsradiobutton2,.jsradiobutton3{
+    visibility: hidden;
+}
+
+
+#htmlnextquestion{
+  display: none;
+  position: absolute;
+  right: 3vw;
+}
+
+#cssnextquestion{
+  display: none;
+  position: absolute;
+  right: 3vw;
+}
+#jsnextquestion{
+    display: none;
+    position: absolute;
+    right: 3vw;
+}
+
+.htmlbox{
+    height: 120px;
+    width: 300px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 5vh;
+    border-radius: 8px;
+}
+.bttnCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5vh;
+}
+.bttnCont button{
+    outline: none;
+    background: none;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 0.1rem 0.6rem;
+    height: 20px;
+    border-radius: 6px;
+}
+.bttnCont button:hover{
+  background-color: black;
+  color: #fff;
+  transition: all 1s ease-in-out;
+}
+.cssbox{
+    height: 120px;
+    width: 300px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 2vh;
+    border-radius: 8px;
+}
+.jsbox{
+    height: 120px;
+    width: 300px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 2vh;
+    border-radius: 8px;
+}
+.mutilpe_quiz{
+visibility: hidden;
+}
+button{
+    cursor: pointer;
+}
+.html_box_div{
+   display: flex;
+   justify-content: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.css_box_div{
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.js_box_div{
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+#htmlspan{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  #htmlspan a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  #htmlspan a:before,
+  #htmlspan a:after{
+    position: absolute;
+    content: "Take HTML Quiz";
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  #htmlspan a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  #htmlspan a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  #htmlspan a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+  .centerhtmlques-ans{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .centercssques-ans{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .centerjsques-ans{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .htmlQues-Ans{
+    background-color: black;
+    color: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 300px;
+    position: relative;
+    display: none;
+  }
+  h1{
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .cssQues-Ans{
+    background-color: black;
+    color: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 300px;
+    position: relative;
+    display: none;
+  }
+
+  .jsQues-Ans{
+    background-color: black;
+    color: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 300px;
+    position: relative;
+    display: none;
+  }
+  #submitcssquiz{
+    display: none;
+  }
+  #submitjsquiz{
+    display: none;
+  }
+  #submithtmlquiz{
+    display: none;
+  }
+  .showscore{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: none;
+    position: relative;
+  }
+  .showallscore{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 27px;
+  }
+  .showhtmlscore{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: none;
+    position: relative;
+  }
+  .showallhtmlscore{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 27px;
+  }
+  .showcssscore{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: none;
+    position: relative;
+  }
+  .showallcssscore{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 27px;
+  }
+  .htmsco{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .csssco{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .jssc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #htmlfailornot{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  #cssfailornot{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  #jsfailornot{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .allnextbtn{
+    border: 1px solid #fff;
+    outline: none;
+    background: none;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem;
+  }

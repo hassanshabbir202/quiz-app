@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    
+    <div class="quizbtnCont">
+        <button id="startquiz" class="glow-on-hover">Start Quiz</button>
+    </div>
+
+      <div class="mutilpe_quiz">
+          <div class="html_box_div">
+            <div class="col-sm htmlbox">
+              <h2>HTML QUIZ</h2>
+              <p>Total Question : 10</p>
+              <p>Time Duration : 30min</p>
+              <p>Passing Criteria : 70%</p>
+              <div class="bttnCont">
+                <button id="html">Take HTML Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="css_box_div">
+            <div class="col-sm cssbox">
+              <h2>CSS QUIZ</h2>
+              <p>Total Question : 10</p>
+              <p>Time Duration : 30min</p>
+              <p>Passing Criteria : 70%</p>
+              <div class="bttnCont">
+                <button id="css">Take CSS Quiz</button>
+              </div>
+
+            </div>
+          </div>
+          <div class="js_box_div">
+            <div class="col-sm jsbox">
+              <h2>JS QUIZ</h2>
+              <p>Total Question : 10</p>
+              <p>Time Duration : 30min</p>
+              <p>Passing Criteria : 70%</p>
+              <div class="bttnCont">
+                <button id="js">Take Javascript Quiz</button>
+              </div>
+
+            </div>
+          </div>
+       
+     
+    </div>
+
+ <div class="centerhtmlques-ans">
+  <div class="htmlQues-Ans">
+    <h1 id="htmlQuestion"></h1>
+    <input type="radio" name="htmll" id="ans1" class="radiobutton1 htmlanswer">
+    <label for="ans1" id="htmlfirstoption"></label><br>
+    <input type="radio" name="htmll" id="ans2" class="radiobutton2 htmlanswer">
+    <label for="ans2" id="htmlsecondoption"></label><br>
+    <input type="radio" name="htmll" id="ans3" class="radiobutton3 htmlanswer">
+    <label for="ans3" id="htmlthirdoption"></label>
+    <button id="htmlnextquestion" class="allnextbtn">Next</button>
+  </div>
+  <button id="submithtmlquiz" class="glow-on-hover">Submit Quiz</button>
+ </div>
+
+ <h4 id="htmlfailornot"></h4>
+  <div class="htmsco">
+ <div class="showhtmlscore">
+  <h3 class="showallhtmlscore"></h3>
+</div>
+</div>
+
+
+
+
+     <div class="centercssques-ans">
+      <div class="cssQues-Ans">
+        <h1 id="cssQuestion"></h1>
+        <input type="radio" name="csss" id="ansone" class="cssradiobutton1 cssanswer">
+        <label for="ansone" id="cssfirstoption"></label><br>
+        <input type="radio" name="csss" id="anstwo" class="cssradiobutton2 cssanswer">
+        <label for="anstwo" id="csssecondoption"></label><br>
+        <input type="radio" name="csss" id="ansthree" class="cssradiobutton3 cssanswer">
+        <label for="ansthree" id="cssthirdoption"></label>
+        <button id="cssnextquestion" class="allnextbtn">Next</button>
+      </div>
+      <button id="submitcssquiz" class="glow-on-hover">Submit Quiz</button>
+     </div>
+
+     <h4 id="cssfailornot"></h4>
+         <div class="csssco">
+     <div class="showcssscore">
+      <h3 class="showallcssscore"></h3>
+    </div>
+  </div>
+    
+
+
+
+<div class="centerjsques-ans">
+  <div class="jsQues-Ans">
+    <h1 id="jsQuestion"></h1>
+    <input type="radio" name="jss" id="anss1" class="jsradiobutton1 jsanswer">
+    <label for="anss1" id="jsfirstoption"></label><br>
+    <input type="radio" name="jss" id="anss2" class="jsradiobutton2 jsanswer">
+    <label for="anss2" id="jssecondoption"></label><br>
+    <input type="radio" name="jss" id="anss3" class="jsradiobutton3 jsanswer">
+    <label for="anss3" id="jsthirdoption"></label>
+    <button id="jsnextquestion" class="allnextbtn">Next</button>
+  </div>
+  <button id="submitjsquiz" class="glow-on-hover">Submit Quiz</button>
+</div>
+      
+<h4 id="jsfailornot"></h4>
+    <div class="jssc">
+    <div class="showscore">
+      <h3 class="showallscore"></h3>
+    </div>
+  </div>
+
+
+
+
+
+
+    <script src="./app.js" defer></script>
+</body>
+</html>
